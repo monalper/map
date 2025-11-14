@@ -1,0 +1,230 @@
+{
+  "nodes": [
+    {"id": "Aragorn", "race": "Human", "house": "Dúnedain", "img": "/assets/Aragorn.jpg"},
+    {"id": "Arwen", "race": "Elf", "house": "Rivendell", "img": "/assets/arwen.webp"},
+    {"id": "Elrond", "race": "Elf", "house": "Rivendell", "img": "/assets/Elrond.jpg"},
+    {"id": "Celebrian", "race": "Elf", "house": "Rivendell"},
+
+    {"id": "Sauron", "race": "Maiar", "house": "Aulë's Maiar", "img": "/assets/Sauron.webp"},
+    {"id": "Gandalf", "race": "Maiar", "house": "Istari", "img": "/assets/gandalf.jpg"},
+    {"id": "Saruman", "race": "Maiar", "house": "Istari", "img": "/assets/saruman.jpg"},
+    {"id": "Witch-king", "race": "Human (Wraith)", "house": "Nazgûl", "img": "/assets/Witch-king.webp"},
+    {"id": "Nazgul 2", "race": "Human (Wraith)", "house": "Nazgûl", "img": "/assets/Nazgul.png"},
+    {"id": "Nazgul 3", "race": "Human (Wraith)", "house": "Nazgûl", "img": "/assets/Nazgul.png"},
+    {"id": "Nazgul 4", "race": "Human (Wraith)", "house": "Nazgûl", "img": "/assets/Nazgul.png"},
+    {"id": "Nazgul 5", "race": "Human (Wraith)", "house": "Nazgûl", "img": "/assets/Nazgul.png"},
+    {"id": "Nazgul 6", "race": "Human (Wraith)", "house": "Nazgûl", "img": "/assets/Nazgul.png"},
+    {"id": "Nazgul 7", "race": "Human (Wraith)", "house": "Nazgûl", "img": "/assets/Nazgul.png"},
+    {"id": "Nazgul 8", "race": "Human (Wraith)", "house": "Nazgûl", "img": "/assets/Nazgul.png"},
+    {"id": "Nazgul 9", "race": "Human (Wraith)", "house": "Nazgûl", "img": "/assets/Nazgul.png"},
+
+    {"id": "Frodo", "race": "Hobbit", "house": "Baggins", "img": "/assets/frodo.jpg"},
+    {"id": "Samwise", "race": "Hobbit", "house": "Gamgee", "img": "/assets/samwise.webp"},
+    {"id": "Meriadoc", "race": "Hobbit", "house": "Brandybuck", "img": "/assets/merry.webp"},
+    {"id": "Peregrin", "race": "Hobbit", "house": "Took", "img": "/assets/Peregrin.webp"},
+    {"id": "Bilbo", "race": "Hobbit", "house": "Baggins", "img": "/assets/bilbo.png"},
+    {"id": "Gollum", "race": "Hobbit", "house": "Stoor", "img": "/assets/gollum.png"},
+
+    {"id": "Legolas", "race": "Elf", "house": "Mirkwood", "img": "/assets/legolas.webp"},
+    {"id": "Galadriel", "race": "Elf", "house": "Lothlórien", "img": "/assets/galadriel.jpg"},
+    {"id": "Celeborn", "race": "Elf", "house": "Lothlórien", "img": "/assets/Celeborn.webp"},
+    {"id": "Glorfindel", "race": "Elf", "house": "Rivendell"},
+
+    {"id": "Gimli", "race": "Dwarf", "house": "Durin's Folk", "img": "/assets/Gimli.webp"},
+
+    {"id": "Boromir", "race": "Human", "house": "Gondor", "img": "/assets/Boromir.webp"},
+    {"id": "Faramir", "race": "Human", "house": "Gondor", "img": "/assets/Faramir.avif"},
+    {"id": "Denethor", "race": "Human", "house": "Gondor", "img": "/assets/Denethor.webp"},
+    {"id": "Théoden", "race": "Human", "house": "Rohan", "img": "/assets/Théoden.jpg"},
+    {"id": "Éowyn", "race": "Human", "house": "Rohan", "img": "/assets/Éowyn.webp"},
+    {"id": "Éomer", "race": "Human", "house": "Rohan", "img": "/assets/Eomer.jpg"},
+
+    {"id": "Isildur", "race": "Human", "house": "Gondor/Arnor"},
+    {"id": "Anárion", "race": "Human", "house": "Gondor/Arnor"},
+    {"id": "Elendil", "race": "Human", "house": "Gondor/Arnor"},
+
+    {"id": "Thranduil", "race": "Elf", "house": "Mirkwood"},
+    {"id": "Tauriel", "race": "Elf", "house": "Mirkwood"},
+
+    {"id": "Elros", "race": "Human", "house": "Númenor"},
+    {"id": "Tar-Míriel", "race": "Human", "house": "Númenor"},
+    {"id": "Ar-Pharazôn", "race": "Human", "house": "Númenor"},
+
+    {"id": "Thingol", "race": "Elf", "house": "Doriath"},
+    {"id": "Melian", "race": "Maiar", "house": "Maiar of Valinor"},
+    {"id": "Lúthien", "race": "Half-elf", "house": "Doriath"},
+    {"id": "Beren", "race": "Human", "house": "House of Bëor"},
+
+    {"id": "Húrin", "race": "Human", "house": "House of Hador"},
+    {"id": "Huor", "race": "Human", "house": "House of Hador"},
+    {"id": "Morwen", "race": "Human", "house": "House of Bëor"},
+    {"id": "Rían", "race": "Human", "house": "House of Bëor"},
+
+    {"id": "Fëanor", "race": "Elf", "house": "Noldor"},
+    {"id": "Fingolfin", "race": "Elf", "house": "Noldor"},
+    {"id": "Finarfin", "race": "Elf", "house": "Noldor"},
+    {"id": "Maedhros", "race": "Elf", "house": "Noldor"},
+    {"id": "Maglor", "race": "Elf", "house": "Noldor"},
+    {"id": "Finrod", "race": "Elf", "house": "Noldor"},
+    {"id": "Celebrimbor", "race": "Elf", "house": "Noldor"},
+
+    {"id": "Turgon", "race": "Elf", "house": "Gondolin"},
+    {"id": "Idril", "race": "Elf", "house": "Gondolin"},
+    {"id": "Tuor", "race": "Human", "house": "House of Hador"},
+    {"id": "Eärendil", "race": "Half-elf", "house": "Sirion"},
+    {"id": "Elwing", "race": "Elf", "house": "Doriath"},
+
+    {"id": "Círdan", "race": "Elf", "house": "Falathrim"},
+
+    {"id": "Durin I", "race": "Dwarf", "house": "Durin's Folk"},
+    {"id": "Thorin", "race": "Dwarf", "house": "Durin's Folk"},
+    {"id": "Balin", "race": "Dwarf", "house": "Durin's Folk"},
+    {"id": "Dwalin", "race": "Dwarf", "house": "Durin's Folk"},
+
+    {"id": "Treebeard", "race": "Ent", "house": "Fangorn", "img": "/assets/Treebeard.jpg"},
+
+    {"id": "Smaug", "race": "Dragon", "house": "None", "img": "/assets/smaug.webp"},
+
+    {"id": "Tom_Bombadil", "race": "Unknown", "house": "None"},
+    {"id": "Goldberry", "race": "Spirit", "house": "River-folk"},
+
+    {"id": "Ungoliant", "race": "Spider-Spirit", "house": "None"},
+    {"id": "Shelob", "race": "Spider", "house": "Ungoliant's Spawn"},
+
+    {"id": "Morgoth", "race": "Vala", "house": "Ainur"},
+    {"id": "Manwë", "race": "Vala", "house": "Ainur"},
+    {"id": "Varda", "race": "Vala", "house": "Ainur"},
+    {"id": "Ulmo", "race": "Vala", "house": "Ainur"},
+    {"id": "Aulë", "race": "Vala", "house": "Ainur"},
+    {"id": "Yavanna", "race": "Vala", "house": "Ainur"},
+    {"id": "Mandos", "race": "Vala", "house": "Ainur"},
+    {"id": "Nienna", "race": "Vala", "house": "Ainur"}
+  ],
+
+  "links": [
+
+    {"source": "Arwen", "target": "Elrond", "relation": "daughter"},
+    {"source": "Arwen", "target": "Celebrian", "relation": "daughter"},
+    {"source": "Arwen", "target": "Aragorn", "relation": "spouse"},
+    {"source": "Elrond", "target": "Celebrian", "relation": "spouse"},
+    {"source": "Elrond", "target": "Elros", "relation": "siblings"},
+    {"source": "Eärendil", "target": "Elrond", "relation": "father"},
+    {"source": "Eärendil", "target": "Elros", "relation": "father"},
+    {"source": "Eärendil", "target": "Elwing", "relation": "spouse"},
+
+
+    {"source": "Elendil", "target": "Isildur", "relation": "father"},
+    {"source": "Elendil", "target": "Anárion", "relation": "father"},
+    {"source": "Isildur", "target": "Anárion", "relation": "siblings"},
+    {"source": "Elros", "target": "Elendil", "relation": "lineage"},
+    {"source": "Isildur", "target": "Aragorn", "relation": "lineage"},
+    {"source": "Ar-Pharazôn", "target": "Tar-Míriel", "relation": "spouse"},
+
+
+    {"source": "Denethor", "target": "Boromir", "relation": "father"},
+    {"source": "Denethor", "target": "Faramir", "relation": "father"},
+    {"source": "Boromir", "target": "Faramir", "relation": "siblings"},
+
+    {"source": "Théoden", "target": "Éomer", "relation": "uncle/nephew"},
+    {"source": "Théoden", "target": "Éomer", "relation": "king/liege"},
+    {"source": "Théoden", "target": "Éowyn", "relation": "uncle/niece"},
+
+    {"source": "Éomer", "target": "Éowyn", "relation": "siblings"},
+
+    {"source": "Frodo", "target": "Samwise", "relation": "friend"},
+    {"source": "Samwise", "target": "Frodo", "relation": "servant/friend"},
+
+    {"source": "Frodo", "target": "Meriadoc", "relation": "friend"},
+    {"source": "Frodo", "target": "Peregrin", "relation": "friend"},
+    {"source": "Meriadoc", "target": "Peregrin", "relation": "friend"},
+    {"source": "Meriadoc", "target": "Peregrin", "relation": "cousins"},
+
+    {"source": "Bilbo", "target": "Frodo", "relation": "cousin/guardian"},
+    {"source": "Frodo", "target": "Bilbo", "relation": "heir"},
+
+ 
+    {"source": "Gandalf", "target": "Bilbo", "relation": "ally"},
+    {"source": "Bilbo", "target": "Thorin", "relation": "ally"},
+    {"source": "Bilbo", "target": "Balin", "relation": "ally"},
+    {"source": "Bilbo", "target": "Dwalin", "relation": "ally"},
+    {"source": "Bilbo", "target": "Smaug", "relation": "enemy"},
+    {"source": "Bilbo", "target": "Gollum", "relation": "enemy"},
+
+
+    {"source": "Gandalf", "target": "Frodo", "relation": "ally"},
+    {"source": "Gandalf", "target": "Aragorn", "relation": "ally"},
+    {"source": "Gandalf", "target": "Legolas", "relation": "ally"},
+    {"source": "Gandalf", "target": "Gimli", "relation": "ally"},
+    {"source": "Gandalf", "target": "Boromir", "relation": "ally"},
+    {"source": "Gandalf", "target": "Samwise", "relation": "ally"},
+
+    {"source": "Legolas", "target": "Gimli", "relation": "friend"},
+    {"source": "Thranduil", "target": "Legolas", "relation": "father"},
+
+
+    {"source": "Treebeard", "target": "Meriadoc", "relation": "ally"},
+    {"source": "Treebeard", "target": "Peregrin", "relation": "ally"},
+    {"source": "Treebeard", "target": "Saruman", "relation": "enemy"},
+
+
+    {"source": "Thingol", "target": "Melian", "relation": "spouse"},
+    {"source": "Thingol", "target": "Lúthien", "relation": "father"},
+    {"source": "Lúthien", "target": "Beren", "relation": "spouse"},
+    {"source": "Elwing", "target": "Beren", "relation": "descendant"},
+    {"source": "Elwing", "target": "Lúthien", "relation": "descendant"},
+
+
+    {"source": "Húrin", "target": "Huor", "relation": "siblings"},
+    {"source": "Húrin", "target": "Morwen", "relation": "spouse"},
+    {"source": "Huor", "target": "Rían", "relation": "spouse"},
+    {"source": "Huor", "target": "Tuor", "relation": "father"},
+
+
+    {"source": "Fëanor", "target": "Fingolfin", "relation": "half-brothers"},
+    {"source": "Fëanor", "target": "Finarfin", "relation": "half-brothers"},
+    {"source": "Fëanor", "target": "Maedhros", "relation": "father"},
+    {"source": "Fëanor", "target": "Maglor", "relation": "father"},
+
+    {"source": "Finarfin", "target": "Finrod", "relation": "father"},
+    {"source": "Finarfin", "target": "Galadriel", "relation": "father"},
+    {"source": "Finrod", "target": "Galadriel", "relation": "siblings"},
+
+    {"source": "Fingolfin", "target": "Turgon", "relation": "father"},
+    {"source": "Tuor", "target": "Idril", "relation": "spouse"},
+    {"source": "Idril", "target": "Eärendil", "relation": "mother"},
+    {"source": "Tuor", "target": "Eärendil", "relation": "father"},
+
+
+    {"source": "Círdan", "target": "Gandalf", "relation": "ally"},
+
+
+    {"source": "Morgoth", "target": "Sauron", "relation": "master/servant"},
+    {"source": "Morgoth", "target": "Ungoliant", "relation": "ally"},
+    {"source": "Ungoliant", "target": "Shelob", "relation": "ancestor"},
+
+    {"source": "Sauron", "target": "Gandalf", "relation": "enemy"},
+    {"source": "Sauron", "target": "Aragorn", "relation": "enemy"},
+    {"source": "Sauron", "target": "Frodo", "relation": "enemy"},
+    {"source": "Saruman", "target": "Gandalf", "relation": "enemy"},
+    {"source": "Gollum", "target": "Frodo", "relation": "enemy"},
+
+    {"source": "Sauron", "target": "Celebrimbor", "relation": "betrayal"},
+
+    {"source": "Sauron", "target": "Witch-king", "relation": "master/servant"},
+    {"source": "Sauron", "target": "Nazgul 2", "relation": "master/servant"},
+    {"source": "Sauron", "target": "Nazgul 3", "relation": "master/servant"},
+    {"source": "Sauron", "target": "Nazgul 4", "relation": "master/servant"},
+    {"source": "Sauron", "target": "Nazgul 5", "relation": "master/servant"},
+    {"source": "Sauron", "target": "Nazgul 6", "relation": "master/servant"},
+    {"source": "Sauron", "target": "Nazgul 7", "relation": "master/servant"},
+    {"source": "Sauron", "target": "Nazgul 8", "relation": "master/servant"},
+    {"source": "Sauron", "target": "Nazgul 9", "relation": "master/servant"},
+
+
+    {"source": "Manwë", "target": "Varda", "relation": "spouse"},
+    {"source": "Aulë", "target": "Yavanna", "relation": "spouse"},
+
+
+    {"source": "Tom_Bombadil", "target": "Goldberry", "relation": "spouse"}
+  ]
+}

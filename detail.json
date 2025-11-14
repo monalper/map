@@ -1,0 +1,885 @@
+{
+  "Aragorn": {
+    "birth": "2931 TA",
+    "death": "120 FO",
+    "major_events": [
+      "Raised in Rivendell under Elrond",
+      "Became Chieftain of the Dúnedain in 2933 TA",
+      "Served in Rohan under the name Thorongil",
+      "Served in Gondor under the name Thorongil",
+      "Retrieval of Gollum attempt with Gandalf",
+      "Fellowship of the Ring (3018-3019 TA)",
+      "Crowned King Elessar in 3019 TA",
+      "Marriage to Arwen Undómiel (3019 TA)"
+    ],
+    "wars": [
+      "War of the Ring",
+      "Battle of Helm's Deep",
+      "Battle of Pelennor Fields",
+      "Battle at the Black Gate"
+    ]
+  },
+
+  "Arwen": {
+    "birth": "241 TA",
+    "death": "121 FO",
+    "major_events": [
+      "Life in Rivendell",
+      "Decision to remain mortal",
+      "Marriage to Aragorn (3019 TA)",
+      "Departure of Elrond from Middle-earth"
+    ],
+    "wars": []
+  },
+
+  "Elrond": {
+    "birth": "First Age 532",
+    "death": "Left Middle-earth 3021 TA",
+    "major_events": [
+      "Refuge at the Havens during Fall of Gondolin",
+      "War of Wrath participation",
+      "Founding of Rivendell (Second Age 1697)",
+      "War of the Last Alliance",
+      "Guardianship of the Three Rings",
+      "Sheltering Isildur’s Heir line"
+    ],
+    "wars": [
+      "War of Wrath",
+      "War of the Elves and Sauron",
+      "War of the Last Alliance"
+    ]
+  },
+
+  "Celebrian": {
+    "birth": "Second Age",
+    "death": "Departed to Valinor 2510 TA",
+    "major_events": [
+      "Captured by Orcs in 2509 TA",
+      "Rescued by Elrond",
+      "Departure to the West"
+    ],
+    "wars": []
+  },
+
+  "Sauron": {
+    "birth": "Before the shaping of Arda",
+    "death": "Spirit severely diminished 3019 TA",
+    "major_events": [
+      "Service under Aulë",
+      "Corruption by Morgoth",
+      "Forging of the One Ring",
+      "War of the Elves and Sauron",
+      "Downfall at the hands of the Last Alliance",
+      "Return in Dol Guldur",
+      "War of the Ring"
+    ],
+    "wars": [
+      "War of the Elves and Sauron",
+      "War of the Last Alliance",
+      "War of the Ring"
+    ]
+  },
+
+  "Gandalf": {
+    "birth": "Before Time, as Olórin",
+    "death": "Resurrection as Gandalf the White 3019 TA",
+    "major_events": [
+      "Arrival of the Istari in Third Age 1000",
+      "Leadership of the White Council",
+      "Expulsion of Sauron from Dol Guldur",
+      "Formation of the Fellowship",
+      "Battle with the Balrog",
+      "Return as Gandalf the White"
+    ],
+    "wars": [
+      "War of the Ring"
+    ]
+  },
+
+  "Saruman": {
+    "birth": "Before Time",
+    "death": "3019 TA",
+    "major_events": [
+      "Arrival of the Istari",
+      "Leadership of the White Council",
+      "Treasures of Orthanc studies",
+      "Fall through the Palantír",
+      "Occupation of the Shire"
+    ],
+    "wars": [
+      "War of the Ring"
+    ]
+  },
+
+  "Witch-king": {
+    "birth": "Second Age (unknown)",
+    "death": "3019 TA",
+    "major_events": [
+      "Corruption by the Nine Rings",
+      "Rise as Lord of the Nazgûl",
+      "Siege of Minas Ithil",
+      "Battle of Pelennor Fields"
+    ],
+    "wars": [
+      "War of the Last Alliance",
+      "War of the Ring"
+    ]
+  },
+
+  "Frodo": {
+    "birth": "2968 TA",
+    "death": "Departed Middle-earth 3021 TA",
+    "major_events": [
+      "Inheritance of Bilbo’s Ring",
+      "Flight from the Shire",
+      "Fellowship of the Ring",
+      "Quest of Mount Doom",
+      "Departure to the West"
+    ],
+    "wars": [
+      "War of the Ring"
+    ]
+  },
+
+  "Samwise": {
+    "birth": "2980 TA",
+    "death": "Left Middle-earth 82 FO",
+    "major_events": [
+      "Gardener to Frodo",
+      "Member of the Fellowship",
+      "Rescue of Frodo in Mordor",
+      "Mayor of the Shire",
+      "Departure to the West"
+    ],
+    "wars": [
+      "War of the Ring"
+    ]
+  },
+
+  "Meriadoc": {
+    "birth": "2982 TA",
+    "death": "Passed in Rohan 63 FO",
+    "major_events": [
+      "Membership in the Fellowship",
+      "Service under Théoden",
+      "Slaying of Witch-king with Éowyn"
+    ],
+    "wars": [
+      "War of the Ring"
+    ]
+  },
+
+  "Peregrin": {
+    "birth": "2990 TA",
+    "death": "Died in Gondor 64 FO",
+    "major_events": [
+      "Membership in the Fellowship",
+      "Service in Gondor",
+      "Battle of the Black Gate"
+    ],
+    "wars": [
+      "War of the Ring"
+    ]
+  },
+
+  "Bilbo": {
+    "birth": "2890 TA",
+    "death": "Departed Middle-earth 3021 TA",
+    "major_events": [
+      "Quest of Erebor 2941 TA",
+      "Discovery of the One Ring",
+      "Authorship of the Red Book",
+      "Departure to the West"
+    ],
+    "wars": [
+      "Battle of Five Armies"
+    ]
+  },
+
+  "Gollum": {
+    "birth": "2430 TA",
+    "death": "3019 TA",
+    "major_events": [
+      "Finding the One Ring 2463 TA",
+      "Corruption into Gollum",
+      "Escape from Mordor",
+      "Capture by Aragorn",
+      "Death in Mount Doom"
+    ],
+    "wars": []
+  },
+
+  "Legolas": {
+    "birth": "Unknown (Third Age early)",
+    "death": "Sailed West 120 FO",
+    "major_events": [
+      "Taking part in the Fellowship",
+      "Battle of Helm’s Deep",
+      "Battle of Pelennor Fields",
+      "Founding of Ithilien colony"
+    ],
+    "wars": [
+      "War of the Ring"
+    ]
+  },
+
+  "Galadriel": {
+    "birth": "Years of the Trees",
+    "death": "Departed Middle-earth 3021 TA",
+    "major_events": [
+      "Exile from Valinor",
+      "Foundation of Lothlórien",
+      "Resistance to Sauron",
+      "Keeper of Nenya"
+    ],
+    "wars": [
+      "War of the Ring"
+    ]
+  },
+
+  "Celeborn": {
+    "birth": "First Age",
+    "death": "Remained in Middle-earth (unknown later)",
+    "major_events": [
+      "Rule of Lothlórien",
+      "War in Dol Guldur",
+      "Cleansing of Mirkwood"
+    ],
+    "wars": [
+      "War of the Ring"
+    ]
+  },
+
+  "Glorfindel": {
+    "birth": "Years of the Trees",
+    "death": "Reborn in Valinor; returned in Second Age",
+    "major_events": [
+      "Fall of Gondolin",
+      "Return to Middle-earth",
+      "Rescue of Frodo at Bruinen"
+    ],
+    "wars": [
+      "War of Wrath",
+      "War of the Ring (indirect)"
+    ]
+  },
+
+  "Gimli": {
+    "birth": "2879 TA",
+    "death": "Sailed West 120 FO",
+    "major_events": [
+      "Fellowship expedition",
+      "Friendship with Legolas",
+      "Battle of Helm’s Deep",
+      "Lord of Aglarond"
+    ],
+    "wars": [
+      "War of the Ring"
+    ]
+  },
+
+  "Boromir": {
+    "birth": "2978 TA",
+    "death": "3019 TA",
+    "major_events": [
+      "Member of the Fellowship",
+      "Defense of Osgiliath",
+      "Death defending Merry and Pippin"
+    ],
+    "wars": [
+      "War of the Ring"
+    ]
+  },
+
+  "Faramir": {
+    "birth": "2983 TA",
+    "death": "82 FO",
+    "major_events": [
+      "Captain of Gondor",
+      "Resistance in Ithilien",
+      "Marriage to Éowyn",
+      "Prince of Ithilien"
+    ],
+    "wars": [
+      "War of the Ring"
+    ]
+  },
+
+  "Denethor": {
+    "birth": "2930 TA",
+    "death": "3019 TA",
+    "major_events": [
+      "Steward of Gondor",
+      "Use of the Palantír",
+      "Siege of Minas Tirith",
+      "Death during the siege"
+    ],
+    "wars": [
+      "War of the Ring"
+    ]
+  },
+
+  "Théoden": {
+    "birth": "2948 TA",
+    "death": "3019 TA",
+    "major_events": [
+      "Reclamation from Saruman’s influence",
+      "Battle of Helm’s Deep",
+      "Death at Pelennor Fields"
+    ],
+    "wars": [
+      "War of the Ring"
+    ]
+  },
+
+  "Éowyn": {
+    "birth": "2995 TA",
+    "death": "Unknown (Fourth Age)",
+    "major_events": [
+      "Ride of the Rohirrim",
+      "Slaying of the Witch-king",
+      "Marriage to Faramir"
+    ],
+    "wars": [
+      "War of the Ring"
+    ]
+  },
+
+  "Éomer": {
+    "birth": "2991 TA",
+    "death": "Unknown",
+    "major_events": [
+      "Imprisonment by Gríma",
+      "Battle of Pelennor Fields",
+      "Coronation as King of Rohan"
+    ],
+    "wars": [
+      "War of the Ring"
+    ]
+  },
+
+  "Isildur": {
+    "birth": "Second Age 3209",
+    "death": "Second Age 3441",
+    "major_events": [
+      "Stealing the fruit of the White Tree",
+      "War of the Last Alliance",
+      "Cutting the One Ring from Sauron",
+      "Disaster of the Gladden Fields"
+    ],
+    "wars": [
+      "War of the Last Alliance"
+    ]
+  },
+
+  "Anárion": {
+    "birth": "Second Age",
+    "death": "Siege of Barad-dûr 3440 SA",
+    "major_events": [
+      "Co-rulership of Gondor",
+      "Construction of Minas Anor and Minas Ithil",
+      "Death in the siege"
+    ],
+    "wars": [
+      "War of the Last Alliance"
+    ]
+  },
+
+  "Elendil": {
+    "birth": "Second Age 3119",
+    "death": "Second Age 3441",
+    "major_events": [
+      "Escape from Númenor",
+      "Founding of Arnor and Gondor",
+      "War of the Last Alliance"
+    ],
+    "wars": [
+      "War of the Last Alliance"
+    ]
+  },
+
+  "Thranduil": {
+    "birth": "First Age",
+    "death": "Unknown",
+    "major_events": [
+      "Battle of Dagorlad",
+      "Rule of the Woodland Realm",
+      "War in the North (War of the Ring period)"
+    ],
+    "wars": [
+      "War of the Last Alliance",
+      "War of the Ring (Northern battles)"
+    ]
+  },
+
+  "Tauriel": {
+    "birth": "Unknown",
+    "death": "—",
+    "major_events": [],
+    "wars": [
+      "Battle of Five Armies (film canon)"
+    ]
+  },
+
+  "Elros": {
+    "birth": "First Age 532",
+    "death": "Second Age 442",
+    "major_events": [
+      "Choice of mortality",
+      "First King of Númenor"
+    ],
+    "wars": []
+  },
+
+  "Tar-Míriel": {
+    "birth": "Second Age",
+    "death": "Drowned in the Downfall of Númenor 3319 SA",
+    "major_events": [
+      "Usurpation by Ar-Pharazôn",
+      "Downfall of Númenor"
+    ],
+    "wars": []
+  },
+
+  "Ar-Pharazôn": {
+    "birth": "Second Age",
+    "death": "Imprisoned in the Caves of the Forgotten 3319 SA",
+    "major_events": [
+      "Conquest of Sauron",
+      "Corruption by Sauron",
+      "Assault on Valinor",
+      "Downfall of Númenor"
+    ],
+    "wars": []
+  },
+
+  "Thingol": {
+    "birth": "Years of the Trees",
+    "death": "First Age 503",
+    "major_events": [
+      "Rule of Doriath",
+      "War of the Jewels",
+      "Death by the Dwarves"
+    ],
+    "wars": [
+      "Wars of Beleriand"
+    ]
+  },
+
+  "Melian": {
+    "birth": "Before Time",
+    "death": "Returned to Valinor after FA 503",
+    "major_events": [
+      "Protection of Doriath with the Girdle"
+    ],
+    "wars": []
+  },
+
+  "Lúthien": {
+    "birth": "FA 120",
+    "death": "FA 503",
+    "major_events": [
+      "Quest for the Silmaril",
+      "Defeat of Sauron (Tol-in-Gaurhoth)",
+      "Revival of Beren"
+    ],
+    "wars": []
+  },
+
+  "Beren": {
+    "birth": "FA 432",
+    "death": "FA 503",
+    "major_events": [
+      "Quest for the Silmaril",
+      "Handing the Silmaril to Thingol"
+    ],
+    "wars": [
+      "Wars of Beleriand"
+    ]
+  },
+
+  "Húrin": {
+    "birth": "FA 441",
+    "death": "FA 502",
+    "major_events": [
+      "Battle of Unnumbered Tears",
+      "Captivity by Morgoth",
+      "Return and death in Dor-lómin"
+    ],
+    "wars": [
+      "Nirnaeth Arnoediad"
+    ]
+  },
+
+  "Huor": {
+    "birth": "FA 444",
+    "death": "FA 473",
+    "major_events": [
+      "Battle of Unnumbered Tears"
+    ],
+    "wars": [
+      "Nirnaeth Arnoediad"
+    ]
+  },
+
+  "Morwen": {
+    "birth": "FA",
+    "death": "FA 501",
+    "major_events": [
+      "Life in Dor-lómin",
+      "Search for Túrin"
+    ],
+    "wars": []
+  },
+
+  "Rían": {
+    "birth": "FA",
+    "death": "FA 473",
+    "major_events": [
+      "Death after Huor’s passing"
+    ],
+    "wars": []
+  },
+
+  "Fëanor": {
+    "birth": "YT 1169",
+    "death": "FA 1497",
+    "major_events": [
+      "Forging of the Silmarils",
+      "Oath of Fëanor",
+      "Kinslaying at Alqualondë",
+      "Death at the hands of Balrogs"
+    ],
+    "wars": [
+      "Wars of Beleriand"
+    ]
+  },
+
+  "Fingolfin": {
+    "birth": "YT",
+    "death": "FA 456",
+    "major_events": [
+      "Crossing of the Helcaraxë",
+      "Duel with Morgoth"
+    ],
+    "wars": [
+      "Dagor Bragollach"
+    ]
+  },
+
+  "Finarfin": {
+    "birth": "YT",
+    "death": "Unknown",
+    "major_events": [
+      "Return to Valinor",
+      "Rule of the Noldor in Aman"
+    ],
+    "wars": []
+  },
+
+  "Maedhros": {
+    "birth": "YT",
+    "death": "FA 587",
+    "major_events": [
+      "Thangorodrim captivity",
+      "Recovery of a Silmaril",
+      "Self-immolation"
+    ],
+    "wars": [
+      "Wars of Beleriand"
+    ]
+  },
+
+  "Maglor": {
+    "birth": "YT",
+    "death": "Fate unknown",
+    "major_events": [
+      "Guardianship of Elros and Elrond",
+      "Loss of a Silmaril"
+    ],
+    "wars": [
+      "Wars of Beleriand"
+    ]
+  },
+
+  "Finrod": {
+    "birth": "YT",
+    "death": "FA 465",
+    "major_events": [
+      "Founding Nargothrond",
+      "Death in Sauron’s dungeons"
+    ],
+    "wars": [
+      "Wars of Beleriand"
+    ]
+  },
+
+  "Celebrimbor": {
+    "birth": "First Age",
+    "death": "Second Age 1697",
+    "major_events": [
+      "Forging of the Rings of Power",
+      "Death in Sauron’s assault on Eregion"
+    ],
+    "wars": [
+      "War of the Elves and Sauron"
+    ]
+  },
+
+  "Turgon": {
+    "birth": "YT",
+    "death": "FA 510",
+    "major_events": [
+      "Founding of Gondolin",
+      "Fall of Gondolin"
+    ],
+    "wars": [
+      "Wars of Beleriand"
+    ]
+  },
+
+  "Idril": {
+    "birth": "FA",
+    "death": "Unknown",
+    "major_events": [
+      "Escape from Gondolin",
+      "Voyage to the Mouths of Sirion"
+    ],
+    "wars": []
+  },
+
+  "Tuor": {
+    "birth": "FA 472",
+    "death": "Unknown (said to have sailed West)",
+    "major_events": [
+      "Arrival in Gondolin",
+      "Marriage to Idril",
+      "Escape at the fall of Gondolin"
+    ],
+    "wars": []
+  },
+
+  "Eärendil": {
+    "birth": "FA 503",
+    "death": "Became a star",
+    "major_events": [
+      "Voyage to Valinor",
+      "Pleading for Elves and Men",
+      "Slaying of Ancalagon"
+    ],
+    "wars": [
+      "War of Wrath"
+    ]
+  },
+
+  "Elwing": {
+    "birth": "FA 503",
+    "death": "Sailed West",
+    "major_events": [
+      "Flight with the Silmaril",
+      "Union with Eärendil"
+    ],
+    "wars": []
+  },
+
+  "Círdan": {
+    "birth": "Years of the Trees",
+    "death": "Remained in Middle-earth into the Fourth Age",
+    "major_events": [
+      "Founding of the Grey Havens",
+      "Guardianship of Narya",
+      "Aid to the Istari"
+    ],
+    "wars": [
+      "War of the Last Alliance",
+      "War of the Ring"
+    ]
+  },
+
+  "Durin I": {
+    "birth": "First Age",
+    "death": "First Age",
+    "major_events": [
+      "Founding of Khazad-dûm"
+    ],
+    "wars": []
+  },
+
+  "Thorin": {
+    "birth": "2746 TA",
+    "death": "2941 TA",
+    "major_events": [
+      "Exile from Erebor",
+      "Quest of Erebor",
+      "Death at Battle of Five Armies"
+    ],
+    "wars": [
+      "Battle of Five Armies"
+    ]
+  },
+
+  "Balin": {
+    "birth": "2763 TA",
+    "death": "2994 TA",
+    "major_events": [
+      "Quest of Erebor",
+      "Attempt to reclaim Moria",
+      "Death in Moria"
+    ],
+    "wars": []
+  },
+
+  "Dwalin": {
+    "birth": "2772 TA",
+    "death": "91 FO",
+    "major_events": [
+      "Quest of Erebor",
+      "Return to Erebor"
+    ],
+    "wars": []
+  },
+
+  "Treebeard": {
+    "birth": "Unknown (very ancient)",
+    "death": "—",
+    "major_events": [
+      "Shepherding Fangorn Forest",
+      "March of the Ents",
+      "Destruction of Isengard"
+    ],
+    "wars": [
+      "War of the Ring"
+    ]
+  },
+
+  "Smaug": {
+    "birth": "Unknown",
+    "death": "2941 TA",
+    "major_events": [
+      "Destruction of Erebor",
+      "Sack of Dale",
+      "Death at Lake-town"
+    ],
+    "wars": []
+  },
+
+  "Tom_Bombadil": {
+    "birth": "Unknown",
+    "death": "—",
+    "major_events": [
+      "Residence in the Old Forest"
+    ],
+    "wars": []
+  },
+
+  "Goldberry": {
+    "birth": "Unknown",
+    "death": "—",
+    "major_events": [],
+    "wars": []
+  },
+
+  "Ungoliant": {
+    "birth": "Unknown",
+    "death": "Unknown (self-destruction)",
+    "major_events": [
+      "Darkening of Valinor",
+      "Consumption of the Trees"
+    ],
+    "wars": []
+  },
+
+  "Shelob": {
+    "birth": "First Age",
+    "death": "Unknown",
+    "major_events": [
+      "Residence in Cirith Ungol",
+      "Attack on Frodo"
+    ],
+    "wars": []
+  },
+
+  "Morgoth": {
+    "birth": "Before Time",
+    "death": "Banished to the Void FA 587",
+    "major_events": [
+      "Rebellion in Valinor",
+      "Creation of Orcs",
+      "Wars of Beleriand",
+      "Defeat in War of Wrath"
+    ],
+    "wars": [
+      "Wars of Beleriand",
+      "War of Wrath"
+    ]
+  },
+
+  "Manwë": {
+    "birth": "Before Time",
+    "death": "—",
+    "major_events": [
+      "Rule over Arda",
+      "Summoning of the Eagles"
+    ],
+    "wars": []
+  },
+
+  "Varda": {
+    "birth": "Before Time",
+    "death": "—",
+    "major_events": [
+      "Creation of the Stars"
+    ],
+    "wars": []
+  },
+
+  "Ulmo": {
+    "birth": "Before Time",
+    "death": "—",
+    "major_events": [
+      "Intervention in Middle-earth",
+      "Messages to Turgon"
+    ],
+    "wars": []
+  },
+
+  "Aulë": {
+    "birth": "Before Time",
+    "death": "—",
+    "major_events": [
+      "Creation of the Dwarves",
+      "Forging of Valinor’s works"
+    ],
+    "wars": []
+  },
+
+  "Yavanna": {
+    "birth": "Before Time",
+    "death": "—",
+    "major_events": [
+      "Creation of the Two Trees",
+      "Guardianship of growing things"
+    ],
+    "wars": []
+  },
+
+  "Mandos": {
+    "birth": "Before Time",
+    "death": "—",
+    "major_events": [
+      "Pronouncement of the Dooms",
+      "Judgment of spirits"
+    ],
+    "wars": []
+  },
+
+  "Nienna": {
+    "birth": "Before Time",
+    "death": "—",
+    "major_events": [
+      "Instruction of Gandalf",
+      "Weeping for the wounded world"
+    ],
+    "wars": []
+  }
+}

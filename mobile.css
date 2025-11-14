@@ -1,0 +1,37 @@
+/* Basic mobile optimizations */
+
+/* Small phones and narrow screens */
+@media (max-width: 768px) {
+  /* Header condense */
+  .app-header { padding: 8px 12px; }
+  /* Hide brand text on mobile, keep logo icon only */
+  .brand h1 { display: none; }
+
+  /* Search input smaller to fit */
+  #searchInput { width: 150px; max-width: 48vw; }
+
+  /* Panels go full-width and slide over */
+  .detail-panel { width: 100vw; right: 0; left: auto; }
+  .filter-panel { width: 100vw; left: 0; }
+
+  /* Hide minimap on mobile to reduce clutter */
+  #minimap { display: none; }
+
+  /* Tappable header icons a bit larger */
+  #randomChar, #filterToggle, #togglePanel { font-size: 20px; padding: 6px 10px; }
+
+  /* Section spacing breathing room */
+  .char-section { margin: 20px 0; }
+  .char-section h3 { margin: 0 0 12px; }
+
+  /* Bottom banner on mobile */
+  .bottom-banner { padding: 10px 12px; }
+  .bottom-banner .banner-content { font-size: 13px; }
+  .banner-close { padding: 8px 10px; }
+}
+
+/* Coarse pointers (touch devices) */
+@media (pointer: coarse) {
+  #randomChar, #filterToggle, #togglePanel { min-width: 36px; min-height: 36px; }
+  .suggestions-list li { padding: 10px 14px; }
+}

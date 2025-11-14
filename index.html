@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Orta Dünya İlişki Haritası</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="mobile.css" media="screen" />
+</head>
+<body>
+  <!--
+            ██████████████████            
+         ████████████████████████         
+       ████████████████████████████       
+     ██████████▓▒░░░░░░░░▒▓██████████     
+   █████████▓░░░░  ░  ░    ░░▓█████████   
+  ████████▓░     ░ ░     ░    ░█████████  
+ ████████▒      ░▒▓▓▓▓▓▓▒░     ░▓████████ 
+ ███████░     ░▒██████████▒     ░▓███████ 
+███████▒    ░░▓████▓░░▓████▒░    ▒████████
+██████▓░░   ░████▓░    ░███▓░    ░████████
+██████▓░░   ▒███▒░     ░███▓░   ░░████████
+██████▓░ ░  ░████▒ ░  █████▒  ░  ▒████████
+███████░   ░░▒████▒░  ███▓▒░  ░ ░█████████
+███████▓░░  ░ ▒█████░     ░ ░ ░░██████████
+████████▓░░  ░ ░▓████░        ▒███████████
+ █████████░░     ▒████░   ░░▒▓███████████ 
+  █████████▓░   ░░▓███▓    ░▒███████████  
+   █████████▓░    ░▓██▓░    ░▓█████████   
+    ████████▓░░  ░░▓██▓░    ░▓████████    
+      ██████▓░   ░░▓██▓░    ░▓██████      
+        ████▓░  ░ ░▓██▓░    ░▓████        
+           █▓░    ░▓██▓░   ░░▓█           
+                 ░░▓██▓░   ░░                                                                                      
+
+   The One Wand | Orta Dünya İlişki Haritası
+   Merhaba! Konsola baktığına göre meraklısın. :)
+   Feedback: u/ChemistryObjective56
+  -->
+  <header class="app-header">
+    <div class="brand">
+        <img src="public/logo.svg" alt="Logo" class="logo-icon">
+        <h1>
+            <span class="brand-bold">The One Wand</span>
+            <span class="brand-sub">| Orta Dünya İlişki Haritası</span>
+        </h1>
+    </div>
+
+    <div class="header-tools">
+      <div class="search-wrap">
+        <input type="text" id="searchInput" placeholder="Karakter ara..." autocomplete="off" />
+        <ul id="suggestions" class="suggestions-list"></ul>
+      </div>
+
+      <!-- Rastgele karakter (zar) -->
+      <button id="randomChar" title="Rastgele karakter">
+        <i class="fa-solid fa-dice"></i>
+      </button>
+
+      <!-- Filtre butonu -->
+      <button id="filterToggle" title="Filtrele">
+        <i class="fa-solid fa-filter"></i>
+      </button>
+
+      <!-- Hamburger menü ikonu -->
+      <button id="togglePanel" title="Detay panelini aç/kapat">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="app-main fullwidth">
+    <section class="viz-wrap">
+      <svg id="graph"></svg>
+      <div id="tooltip" class="tooltip" role="tooltip" aria-hidden="true"></div>
+      <!-- 🔍 Minimap kutusu -->
+      <div id="minimap"></div>
+    </section>
+
+    <!-- Sağ panel -->
+    <aside class="detail-panel hidden" id="detail">
+      <div class="panel-header">
+        <div class="panel-title">Detaylar</div>
+        <button id="closeDetail" title="Kapat">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="panel-body" id="detailBody">
+        <p>Bir düğüme tıklayın.</p>
+      </div>
+    </aside>
+
+    <!-- Sol filtre paneli -->
+    <aside class="filter-panel hidden" id="filterPanel">
+      <div class="panel-header">
+        <div class="panel-title">Filtrele</div>
+        <button id="closeFilter" title="Kapat">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="panel-body">
+        <h3>Irklar</h3>
+        <div class="multiselect-actions" data-for="raceFilters">
+          <button type="button" class="btn-small" data-action="select-all">Hepsini Seç</button>
+          <button type="button" class="btn-small" data-action="clear-all">Hepsini Kaldır</button>
+        </div>
+        <div id="raceFilters"></div>
+
+        <h3>Bağ türü</h3>
+        <select id="relationFilter">
+          <option value="all">Hepsi</option>
+          <option value="ally">Müttefik</option>
+          <option value="enemy">Düşman</option>
+          </select>
+
+          <h3>Bağlantı türleri</h3>
+          <div class="multiselect-actions" data-for="relationTypeFilters">
+            <button type="button" class="btn-small" data-action="select-all">Hepsini Seç</button>
+            <button type="button" class="btn-small" data-action="clear-all">Hepsini Kaldır</button>
+          </div>
+          <div id="relationTypeFilters"></div>
+        </div>
+    </aside>
+  </main>
+
+  <!-- Bottom Banner (dismissable, persists via localStorage) -->
+  <div id="bottomBanner" class="bottom-banner" style="display:none">
+    <div class="banner-content">
+      For feedback, suggestions, or requests about the map, feel free to contact me:
+      <a href="https://www.reddit.com/user/ChemistryObjective56" target="_blank" rel="noopener noreferrer">u/ChemistryObjective56</a>
+    </div>
+    <button id="closeBanner" class="banner-close" title="Kapat">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
