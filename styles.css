@@ -131,14 +131,56 @@
   
   .label{fill:var(--ink);font-size:11px;pointer-events:none;}
   .link{stroke:var(--ink);stroke-opacity:.35;}
-  .link.enemy{stroke:var(--accent);stroke-width:2.2;stroke-opacity:.7;}
-  .link.kinship{stroke:#4caf50;stroke-width:2;stroke-opacity:.65;}
-  .link.fellowship{stroke:#2196f3;stroke-width:2;stroke-opacity:.65;}
-  .link.master-servant{stroke:#ff9800;stroke-width:2;stroke-opacity:.65;}
-  .link.historical{stroke:#9c27b0;stroke-width:2;stroke-opacity:.65;}
-  .link.romantic{stroke:#ec407a;stroke-width:2;stroke-opacity:.65;}
-  .link.alliance{stroke:#ffeb3b;stroke-width:2;stroke-opacity:.65;}
+  .link.enemy{
+    stroke:#D63A3A;
+    stroke-width:2.4;
+    stroke-opacity:.8;
+  }
+  
+  .link.kinship{
+    stroke:#74C174;
+    stroke-width:2.2;
+    stroke-opacity:.75;
+  }
+  
+  .link.fellowship{
+    stroke:#4E7DE0;
+    stroke-width:2.2;
+    stroke-opacity:.75;
+  }
+  
+  .link.master-servant{
+    stroke:#A6A6A6;
+    stroke-width:2.1;
+    stroke-opacity:.7;
+  }
+  
+  .link.historical{
+    stroke:#9A6CCE;
+    stroke-width:2.1;
+    stroke-opacity:.7;
+  }
+  
+  .link.romantic{
+    stroke:#FF7FB4;
+    stroke-width:2.2;
+    stroke-opacity:.75;
+  }
+  
+  .link.alliance{
+    stroke:#E2A83B;
+    stroke-width:2.3;
+    stroke-opacity:.78;
+  }
+         
+  
   .node circle{cursor:pointer;}
+  .node.selected circle{
+    stroke:#e3b737;
+    stroke-width:5;
+
+    fill: #1D1D1D;
+  }
   
   /* Scrollbar genel ayarları (Firefox için) */
 * {
@@ -228,6 +270,10 @@
   .connections-list li { cursor: pointer; }
   .connections-list .conn-name { text-decoration: underline; color: #eee; }
   .connections-list li:hover .conn-name { color: var(--accent); }
+  .war-list li,
+  .war-participants li { cursor: pointer; }
+  .war-list li,
+  .war-participants li { text-decoration: underline; }
 
   /* Remove bullets in right sidebar lists */
   .detail-panel .char-section ul { list-style: none; padding-left: 0; }

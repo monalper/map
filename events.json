@@ -1,0 +1,66 @@
+{
+  "Fellowship of the Ring (3018-3019 TA)": {
+    "age": "Third Age",
+    "period": "TA 3018–3019",
+    "type": "Quest",
+    "summary": "The journey of the Nine Walkers from Rivendell to the breaking of the Fellowship, forming the core of the struggle against Sauron.",
+    "outcome": "The Fellowship is broken but its members continue the fight on different fronts."
+  },
+  "Fellowship of the Ring": {
+    "age": "Third Age",
+    "period": "TA 3018–3019",
+    "type": "Quest",
+    "summary": "The formation and travels of the Fellowship to aid Frodo in bearing the One Ring towards Mordor.",
+    "outcome": "The Fellowship's actions allow the Ring-bearer to advance toward Mount Doom."
+  },
+  "Quest of Mount Doom": {
+    "age": "Third Age",
+    "period": "TA 3018–3019",
+    "type": "Quest",
+    "summary": "Frodo and Sam's journey through Mordor to cast the One Ring into the fires of Orodruin.",
+    "outcome": "The One Ring is destroyed and Sauron is overthrown."
+  },
+  "Quest of Erebor 2941 TA": {
+    "age": "Third Age",
+    "period": "TA 2941",
+    "type": "Quest",
+    "summary": "Bilbo's adventure with Thorin and his company to reclaim the Lonely Mountain from Smaug.",
+    "outcome": "Smaug is slain and Erebor is reclaimed, leading to the Battle of Five Armies."
+  },
+  "Battle with the Balrog": {
+    "age": "Third Age",
+    "period": "TA 3019",
+    "type": "Duel",
+    "summary": "Gandalf's confrontation with Durin's Bane in Moria, leading to his death and return as Gandalf the White.",
+    "outcome": "The Balrog is slain and Gandalf is sent back with greater authority."
+  },
+  "March of the Ents": {
+    "age": "Third Age",
+    "period": "TA 3019",
+    "type": "Uprising",
+    "summary": "The Ents of Fangorn, led by Treebeard, march on Isengard in response to Saruman's depredations.",
+    "outcome": "Isengard is destroyed as a power of Saruman and he is effectively neutralized."
+  },
+  "Darkening of Valinor": {
+    "age": "Years of the Trees",
+    "period": "Y.T. 1495",
+    "type": "Catastrophe",
+    "summary": "Morgoth and Ungoliant destroy the Two Trees of Valinor, plunging the Blessed Realm into darkness.",
+    "outcome": "The light of the Trees is lost; the Silmarils become the chief preserved light of the Trees."
+  },
+  "Wars of Beleriand": {
+    "age": "First Age",
+    "period": "First Age (multiple campaigns)",
+    "type": "Wars",
+    "summary": "A series of great battles between Morgoth and the Elves and their allies in Beleriand.",
+    "outcome": "Most of Beleriand is ruined, setting the stage for the War of Wrath."
+  },
+  "Destruction of Erebor": {
+    "age": "Third Age",
+    "period": "TA 2770",
+    "type": "Sack",
+    "summary": "Smaug attacks the Lonely Mountain, driving out the Dwarves and laying waste to Dale.",
+    "outcome": "Thorin's line becomes exiled and Erebor remains under Smaug's control until the Quest of Erebor."
+  }
+}
+

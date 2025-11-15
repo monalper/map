@@ -5,19 +5,19 @@ const RACES = [
 ];
 
 const raceStyles = {
-  "Elf": { fill: "#EEEEEE", stroke: "#111", strokeWidth: 2 },
-  "Human": { fill: "#EED7B5", stroke: "#111", strokeWidth: 2 },
-  "Dwarf": { fill: "#333", stroke: "#FFF", strokeWidth: 2 },
-  "Hobbit": { fill: "#CC3355", stroke: "#FFF", strokeWidth: 2 },
-  "Maiar": { fill: "#FFF", stroke: "#CC3355", strokeWidth: 2 },
-  "Vala": { fill: "#ffaa00", stroke: "#111", strokeWidth: 2 },
-  "Half-elf": { fill: "#DDDDFF", stroke: "#111", strokeWidth: 2 },
-  "Dragon": { fill: "#550000", stroke: "#ffaa00", strokeWidth: 2 },
-  "Spirit": { fill: "#99FFEE", stroke: "#006666", strokeWidth: 2 },
-  "Spider-Spirit": { fill: "#220022", stroke: "#AA00AA", strokeWidth: 2 },
-  "Spider": { fill: "#330033", stroke: "#880088", strokeWidth: 2 },
-  "Ent": { fill: "#775533", stroke: "#2A1A0A", strokeWidth: 2 },
-  "Unknown": { fill: "#999", stroke: "#333", strokeWidth: 2 }
+  "Elf":          { "fill": "#8FBFE0", "stroke": "#1A3A55", "strokeWidth": 2 },
+  "Human":        { "fill": "#E7C7A4", "stroke": "#5A3C20", "strokeWidth": 2 },
+  "Dwarf":        { "fill": "#6A5E59", "stroke": "#F2E9CE", "strokeWidth": 2 },
+  "Hobbit":       { "fill": "#D97C7C", "stroke": "#5A1E1E", "strokeWidth": 2 },
+  "Maiar":        { "fill": "#F2ECAA", "stroke": "#A48B00", "strokeWidth": 2 },
+  "Vala":         { "fill": "#D6A122", "stroke": "#4A3300", "strokeWidth": 2 },
+  "Half-elf":     { "fill": "#B7A8FF", "stroke": "#3D316F", "strokeWidth": 2 },
+  "Dragon":       { "fill": "#922121", "stroke": "#F2A23A", "strokeWidth": 2 },
+  "Spirit":       { "fill": "#82D1C9", "stroke": "#1F5C56", "strokeWidth": 2 },
+  "Spider-Spirit":{ "fill": "#6B2B6B", "stroke": "#C46CC4", "strokeWidth": 2 },
+  "Spider":       { "fill": "#502050", "stroke": "#A35EA3", "strokeWidth": 2 },
+  "Ent":          { "fill": "#8A6F4A", "stroke": "#3A2B1A", "strokeWidth": 2 },
+  "Unknown":      { "fill": "#BBBBBB", "stroke": "#444444", "strokeWidth": 2 }
 };
 
 // === DOM referansları ===
@@ -44,6 +44,9 @@ const relationTypeFilters = document.getElementById("relationTypeFilters");
 let nodes, links, sim, node, link;
 let infoData = {};
 let detailsData = {};
+let warsData = {};
+let eventsData = {};
+let selectedNodeId = null;
 let currentZoom = d3.zoomIdentity;
 
 // Minimap
@@ -81,12 +84,16 @@ svg.call(zoom);
 Promise.all([
   d3.json("data.json"),
   d3.json("inf.json").catch(() => ({})),
-  d3.json("detail.json").catch(() => ({}))
-]).then(([data, info, details]) => {
+  d3.json("detail.json").catch(() => ({})),
+  d3.json("war.json").catch(() => ({})),
+  d3.json("events.json").catch(() => ({}))
+]).then(([data, info, details, wars, events]) => {
   nodes = data.nodes;
   links = data.links;
   infoData = info;
   detailsData = details;
+  warsData = wars || {};
+  eventsData = events || {};
 
   // === Connected Component hesaplama ===
   function computeComponents() {
@@ -125,9 +132,10 @@ Promise.all([
 
   // === Force sim ===
   sim = d3.forceSimulation(nodes)
-    .force("link", d3.forceLink(links).id(d => d.id).distance(80).strength(0.75))
-    .force("charge", d3.forceManyBody().strength(-200))
-    .force("collision", d3.forceCollide().radius(18))
+    // Bağların daha az iç içe girmesi için mesafe ve itme artırıldı
+    .force("link", d3.forceLink(links).id(d => d.id).distance(110).strength(0.6))
+    .force("charge", d3.forceManyBody().strength(-260))
+    .force("collision", d3.forceCollide().radius(22))
     .force("center", d3.forceCenter(window.innerWidth / 2, window.innerHeight / 2).strength(0.1))
 
     // === Component Gravity (alt grupları ana gruba yaklaştırır) ===
@@ -142,8 +150,8 @@ Promise.all([
         const cy = d3.mean(comp, d => d.y);
 
         comp.forEach(n => {
-          n.vx += (mainCx - cx) * 0.045 * alpha;
-          n.vy += (mainCy - cy) * 0.045 * alpha;
+          n.vx += (mainCx - cx) * 0.02 * alpha;
+          n.vy += (mainCy - cy) * 0.02 * alpha;
         });
       });
     });
@@ -280,6 +288,11 @@ function focusNode(d) {
 // === Detay Paneli ===
 // ------------------------------------------------------
 function showDetails(d) {
+  selectedNodeId = d.id;
+  if (node) {
+    node.classed("selected", n => n.id === selectedNodeId);
+  }
+
   const connections = links.filter(
     l => l.source.id === d.id || l.target.id === d.id
   ).map(l => {
@@ -322,8 +335,8 @@ function showDetails(d) {
     ? `
       <div class="char-section">
         <h3>Savaşlar:</h3>
-        <ul>
-          ${extra.wars.map(w => `<li>${w}</li>`).join("")}
+        <ul class="war-list">
+          ${extra.wars.map(w => `<li class="war-item" data-war="${w}">${w}</li>`).join("")}
         </ul>
       </div>
     `
@@ -355,11 +368,132 @@ function showDetails(d) {
 
 // Sidebar connection click → jump to that character
 detail.addEventListener('click', e => {
-  const item = e.target.closest('.conn-item');
-  if (!item) return;
-  const id = item.getAttribute('data-id');
-  if (!id) return;
-  jumpToNodeById(id);
+  const connItem = e.target.closest('.conn-item');
+  if (connItem) {
+    const id = connItem.getAttribute('data-id');
+    if (id) jumpToNodeById(id);
+    return;
+  }
+
+  const eventItem = e.target.closest('.event-item');
+  if (eventItem) {
+    const eventName = eventItem.getAttribute('data-event');
+    if (!eventName) return;
+
+    const ev = eventsData && eventsData[eventName] ? eventsData[eventName] : {};
+
+    const meta = [];
+    if (ev.age) meta.push({ label: "��a�Y:", value: ev.age });
+    if (ev.period) meta.push({ label: "D��nem:", value: ev.period });
+    if (ev.type) meta.push({ label: "TǬr:", value: ev.type });
+    if (ev.outcome) meta.push({ label: "Sonu��:", value: ev.outcome });
+
+    const metaGrid = meta.length
+      ? `
+        <div class="meta-grid">
+          ${meta.map(m => `
+            <div class="meta-label">${m.label}</div>
+            <div class="meta-value">${m.value}</div>
+          `).join("")}
+        </div>
+      `
+      : "";
+
+    const summaryHtml = ev.summary
+      ? `<div class="char-info">${ev.summary}</div>`
+      : "";
+
+    const participants = Object.entries(detailsData || {})
+      .filter(([, extra]) => extra && Array.isArray(extra.major_events) && extra.major_events.includes(eventName))
+      .map(([id]) => id)
+      .sort((a, b) => a.localeCompare(b));
+
+    const participantsHtml = participants.length
+      ? `
+        <div class="char-section">
+          <h3>Kat��lanlar:</h3>
+          <ul class="war-participants">
+            ${participants.map(p => `<li class="war-participant" data-id="${p}">${p}</li>`).join("")}
+          </ul>
+        </div>
+      `
+      : "";
+
+    detail.innerHTML = `
+      <h2>${eventName}</h2>
+      ${metaGrid}
+      ${summaryHtml}
+      ${participantsHtml}
+    `;
+
+    panel.classList.remove("hidden");
+    main.classList.remove("fullwidth");
+    repositionMinimap();
+    return;
+  }
+
+  const warItem = e.target.closest('.war-item');
+  if (warItem) {
+    const warName = warItem.getAttribute('data-war');
+    if (!warName) return;
+
+    const war = warsData && warsData[warName] ? warsData[warName] : {};
+
+    const meta = [];
+    if (war.age) meta.push({ label: "Çağ:", value: war.age });
+    if (war.period) meta.push({ label: "Dönem:", value: war.period });
+    if (war.type) meta.push({ label: "Tür:", value: war.type });
+    if (war.outcome) meta.push({ label: "Sonuç:", value: war.outcome });
+
+    const metaGrid = meta.length
+      ? `
+        <div class="meta-grid">
+          ${meta.map(m => `
+            <div class="meta-label">${m.label}</div>
+            <div class="meta-value">${m.value}</div>
+          `).join("")}
+        </div>
+      `
+      : "";
+
+    const summaryHtml = war.summary
+      ? `<div class="char-info">${war.summary}</div>`
+      : "";
+
+    const participants = Object.entries(detailsData || {})
+      .filter(([, extra]) => extra && Array.isArray(extra.wars) && extra.wars.includes(warName))
+      .map(([id]) => id)
+      .sort((a, b) => a.localeCompare(b));
+
+    const participantsHtml = participants.length
+      ? `
+        <div class="char-section">
+          <h3>Katılanlar:</h3>
+          <ul class="war-participants">
+            ${participants.map(p => `<li class="war-participant" data-id="${p}">${p}</li>`).join("")}
+          </ul>
+        </div>
+      `
+      : "";
+
+    detail.innerHTML = `
+      <h2>${warName}</h2>
+      ${metaGrid}
+      ${summaryHtml}
+      ${participantsHtml}
+    `;
+
+    panel.classList.remove("hidden");
+    main.classList.remove("fullwidth");
+    repositionMinimap();
+    return;
+  }
+
+  const participantItem = e.target.closest('.war-participant');
+  if (participantItem) {
+    const pid = participantItem.getAttribute('data-id');
+    if (pid) jumpToNodeById(pid);
+  }
 });
 
 function jumpToNodeById(id) {
@@ -731,15 +865,18 @@ function initBottomBanner() {
 // ------------------------------------------------------
 function initConsoleAscii() {
   const art = `
-░▀█▀░█░█░█▀▀░░░█▀█░█▀█░█▀▀░░░█░█░█▀█░█▀█░█▀▄
-░░█░░█▀█░█▀▀░░░█░█░█░█░█▀▀░░░█▄█░█▀█░█░█░█░█
-░░▀░░▀░▀░▀▀▀░░░▀▀▀░▀░▀░▀▀▀░░░▀░▀░▀░▀░▀░▀░▀▀░
+████████╗██╗  ██╗███████╗     ██████╗ ███╗   ██╗███████╗    ██╗    ██╗ █████╗ ███╗   ██╗██████╗ 
+╚══██╔══╝██║  ██║██╔════╝    ██╔═══██╗████╗  ██║██╔════╝    ██║    ██║██╔══██╗████╗  ██║██╔══██╗
+   ██║   ███████║█████╗      ██║   ██║██╔██╗ ██║█████╗      ██║ █╗ ██║███████║██╔██╗ ██║██║  ██║
+   ██║   ██╔══██║██╔══╝      ██║   ██║██║╚██╗██║██╔══╝      ██║███╗██║██╔══██║██║╚██╗██║██║  ██║
+   ██║   ██║  ██║███████╗    ╚██████╔╝██║ ╚████║███████╗    ╚███╔███╔╝██║  ██║██║ ╚████║██████╔╝
+   ╚═╝   ╚═╝  ╚═╝╚══════╝     ╚═════╝ ╚═╝  ╚═══╝╚══════╝     ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ 
 `;
   try {
     // Force monospace so spacing aligns perfectly in DevTools
     console.log('%c' + art, 'font-family: monospace; line-height: 1.05; font-size: 12px;');
     console.log("%cThe One Wand | Orta Dünya İlişki Haritası", "color:#CC3355;font-weight:700;");
-    console.log("%cMerhaba! Konsola baktığına göre meraklısın. :)", "color:#bbb;");
+    console.log("%c:)", "color:#bbb;");
   } catch (_) {
     // no-op
   }

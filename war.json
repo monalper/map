@@ -1,0 +1,73 @@
+{
+  "War of the Ring": {
+    "age": "Third Age",
+    "period": "TA 3018–3019",
+    "type": "War",
+    "outcome": "Sauron's defeat and the end of the Third Age",
+    "summary": "The final conflict against Sauron in which the Free Peoples of Middle-earth unite to destroy the One Ring and overthrow the Dark Lord."
+  },
+  "Battle of Helm's Deep": {
+    "age": "Third Age",
+    "period": "March 3019 TA",
+    "type": "Battle",
+    "outcome": "Rohan repels Saruman's forces",
+    "summary": "The siege of the Hornburg in Rohan, where Théoden's riders and their allies withstand Saruman's army of Uruk-hai until Gandalf arrives with reinforcements."
+  },
+  "Battle of Pelennor Fields": {
+    "age": "Third Age",
+    "period": "March 3019 TA",
+    "type": "Battle",
+    "outcome": "Sauron's armies routed before Minas Tirith",
+    "summary": "The great battle outside Minas Tirith in which the forces of Gondor and Rohan, aided by Aragorn, defeat Sauron's hosts and the Witch-king of Angmar is slain."
+  },
+  "Battle at the Black Gate": {
+    "age": "Third Age",
+    "period": "March 3019 TA",
+    "type": "Battle",
+    "outcome": "Diversion succeeds as the Ring is destroyed",
+    "summary": "A desperate assault led by Aragorn at the Morannon to distract Sauron and draw his Eye away from Frodo and Sam in Mordor."
+  },
+  "War of Wrath": {
+    "age": "First Age",
+    "period": "FA 545–587",
+    "type": "War",
+    "outcome": "Defeat and exile of Morgoth",
+    "summary": "The final war of the First Age in which the Valar and the hosts of the West overthrow Morgoth and destroy much of Beleriand."
+  },
+  "War of the Elves and Sauron": {
+    "age": "Second Age",
+    "period": "SA 1693–1701",
+    "type": "War",
+    "outcome": "Sauron driven from Eriador but not destroyed",
+    "summary": "The conflict sparked by Sauron's attempt to dominate the Elves through the Rings of Power, culminating in the sack of Eregion and the intervention of Númenor."
+  },
+  "War of the Last Alliance": {
+    "age": "Second/Third Age",
+    "period": "SA 3434 – TA 2",
+    "type": "War",
+    "outcome": "Sauron defeated and the One Ring taken by Isildur",
+    "summary": "The great war in which the Elves and Men under Gil-galad and Elendil besiege and defeat Sauron in Mordor at the end of the Second Age."
+  },
+  "Battle of Five Armies": {
+    "age": "Third Age",
+    "period": "TA 2941",
+    "type": "Battle",
+    "outcome": "Defeat of the goblins and wargs of the North",
+    "summary": "The battle at the Lonely Mountain fought between Dwarves, Elves, Men and their enemies after the death of Smaug."
+  },
+  "Wars of Beleriand": {
+    "age": "First Age",
+    "period": "First Age (multiple campaigns)",
+    "type": "Wars",
+    "outcome": "Progressive destruction of the Elvish kingdoms by Morgoth until the War of Wrath",
+    "summary": "A series of major conflicts in Beleriand between the forces of Morgoth and the Elves and their allies throughout the First Age."
+  },
+  "War of the Ring (indirect)": {
+    "age": "Third Age",
+    "period": "TA 3018–3019",
+    "type": "War (indirect involvement)",
+    "outcome": "Sauron's defeat and the end of the Third Age",
+    "summary": "Used for characters whose role in the War of the Ring is indirect or primarily background, while still being shaped by its events."
+  }
+}
+
