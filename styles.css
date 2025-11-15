@@ -132,6 +132,12 @@
   .label{fill:var(--ink);font-size:11px;pointer-events:none;}
   .link{stroke:var(--ink);stroke-opacity:.35;}
   .link.enemy{stroke:var(--accent);stroke-width:2.2;stroke-opacity:.7;}
+  .link.kinship{stroke:#4caf50;stroke-width:2;stroke-opacity:.65;}
+  .link.fellowship{stroke:#2196f3;stroke-width:2;stroke-opacity:.65;}
+  .link.master-servant{stroke:#ff9800;stroke-width:2;stroke-opacity:.65;}
+  .link.historical{stroke:#9c27b0;stroke-width:2;stroke-opacity:.65;}
+  .link.romantic{stroke:#ec407a;stroke-width:2;stroke-opacity:.65;}
+  .link.alliance{stroke:#ffeb3b;stroke-width:2;stroke-opacity:.65;}
   .node circle{cursor:pointer;}
   
   /* Scrollbar genel ayarları (Firefox için) */

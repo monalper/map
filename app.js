@@ -151,7 +151,7 @@ Promise.all([
   // === Çizim ===
   link = g.append("g").selectAll("line")
     .data(links).join("line")
-    .attr("class", d => `link ${relationClass(d.relation)}`);
+    .attr("class", d => `link ${relationClass(d)}`);
 
   node = g.append("g").selectAll("g.node")
     .data(nodes).join("g")
@@ -433,9 +433,9 @@ function initRandom() {
 // ------------------------------------------------------
 // === FİLTRE ===
 // ------------------------------------------------------
-function buildFilters() {
-  // Build race filters dynamically from data to avoid hiding unknown races
-  const allRaces = Array.from(new Set((nodes || []).map(n => n.race))).sort();
+  function buildFilters() {
+    // Build race filters dynamically from data to avoid hiding unknown races
+    const allRaces = Array.from(new Set((nodes || []).map(n => n.race))).sort();
   raceFilters.innerHTML = "";
   allRaces.forEach(r => {
     const lbl = document.createElement("label");
@@ -447,12 +447,26 @@ function buildFilters() {
     lbl.append(inp, " " + r);
     raceFilters.append(lbl);
   });
-  activeRaces = new Set(allRaces);
+    activeRaces = new Set(allRaces);
 
-  relationFilter.onchange = e => {
-    activeRelation = e.target.value;
-    updateFilters();
-  };
+    // Build relation category (ba�Y tǬrǬ) options
+    if (relationFilter) {
+      relationFilter.innerHTML = `
+        <option value="all">Hepsi</option>
+        <option value="kinship">Kinship</option>
+        <option value="fellowship">Fellowship</option>
+        <option value="master-servant">Master\u2013Servant</option>
+        <option value="enemy">Enemy</option>
+        <option value="historical">Historical Influence</option>
+        <option value="romantic">Romantic</option>
+        <option value="alliance">Alliance</option>
+      `;
+    }
+  
+    relationFilter.onchange = e => {
+      activeRelation = e.target.value;
+      updateFilters();
+    };
 
   // Build relation type multi-select checkboxes based on data
   if (relationTypeFilters) {
@@ -492,8 +506,8 @@ function updateFilters() {
     );
   }
 
-  const visibleLinks = links.filter(l => {
-    const cls = relationClass(l.relation);
+    const visibleLinks = links.filter(l => {
+      const cls = relationClass(l);
     const relMatch = activeRelation === "all" || activeRelation === cls;
     const relType = (l.relation || "").trim();
     const typeMatch = !relationTypeFilters || activeRelationTypes.has(relType);
@@ -638,13 +652,60 @@ function repositionMinimap() {
 }
 
 // ------------------------------------------------------
-function relationClass(r) {
-  if (!r) return "ally";
-  const s = r.toLowerCase();
-  if (s.includes("enemy")) return "enemy";
-  if (s.includes("spouse")) return "family";
-  return "ally";
-}
+function relationClass(link) {
+    if (!link) return "alliance";
+
+    // Explicit bondType from JSON, if present
+    if (link.bondType) return link.bondType;
+
+    const r = (link.relation || "").toLowerCase();
+
+    // Enemy / antagonistic
+    if (r.includes("enemy") || r.includes("betrayal")) return "enemy";
+
+    // Master–Servant / hierarchical
+    if (r.includes("master/servant") || r.includes("servant/") || r.includes("king/liege")) {
+      return "master-servant";
+    }
+
+    // Romantic bonds
+    if (r.includes("spouse")) return "romantic";
+
+    // Fellowship / close companions
+    if (r.includes("friend")) return "fellowship";
+
+    // Kinship (family relations)
+    if (
+      r.includes("father") ||
+      r.includes("mother") ||
+      r.includes("daughter") ||
+      r.includes("son") ||
+      r.includes("siblings") ||
+      r.includes("half-brothers") ||
+      r.includes("uncle") ||
+      r.includes("niece") ||
+      r.includes("nephew") ||
+      r.includes("cousin")
+    ) {
+      return "kinship";
+    }
+
+    // Historical influence (ancestry, heirs, notable legacy)
+    if (
+      r.includes("ancestor") ||
+      r.includes("descendant") ||
+      r.includes("lineage") ||
+      r.includes("heir")
+    ) {
+      return "historical";
+    }
+
+    // Alliances, default positive ties
+    if (r.includes("ally")) return "alliance";
+
+    // Fallback
+    return "alliance";
+  }
 
 // ------------------------------------------------------
 // === BOTTOM BANNER (LocalStorage persist) ===
